@@ -1,0 +1,227 @@
+@import "hamburgers";
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+body{
+	font-family:'Ubuntu', sans-serif;
+	font-size:16px;
+	line-height:1.6;
+}
+
+.container-fluid{
+	max-width:1280px;
+
+	@include media-sm-md-lg(){
+		padding-left:30px;
+		padding-right:30px;
+	}
+}
+
+nav{
+	z-index:2;
+
+	.bar{
+		background:rgba(0,157,204,0.8);
+		position:fixed;
+		width:100%;
+		top:0;
+		left:0;
+		padding:10px 0;
+		z-index:2;
+	}
+
+	a.logo{
+		color:#fff;
+		font-size:28px;
+		font-weight:bold;
+		line-height:60px;
+		text-transform:uppercase;
+		text-decoration:none;
+	}
+
+	&.open{
+		height:100%;
+		background:rgba(0,157,204,0.8);
+
+		.bar{
+			background:transparent;
+		}
+	}
+
+	button{
+		float:right;
+		color:#fff;
+		padding-right:0 !important;
+	}
+
+	.menu{
+		background:rgba(0,157,204,0.8);
+		z-index:1;
+		position:fixed;
+		left:0;
+		width:100%;
+		height:100%;
+		visibility:hidden;
+		opacity:0;
+		-moz-transition:	 opacity 0.3s ease-in-out;
+		-o-transition: 		 opacity 0.3s ease-in-out;
+		-webkit-transition:opacity 0.3s ease-in-out;
+		transition: 			 opacity 0.3s ease-in-out;
+	}
+
+	ul{
+		padding-left:0;
+		list-style:none;
+		font-size:60px;
+		text-align:center;
+		top:50%;
+		transform:translateY(-50%);
+		margin:0;
+		position:absolute;
+		left:0;
+		width:100%;
+
+		li{
+			margin-bottom:30px;
+		}
+
+		a,
+		a:active,
+		a:hover{
+			color:#fff;
+		}
+	}
+
+	&.open .menu{
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+header{
+	background:$primary-color;
+	height:540px;
+}
+
+.grid{
+	margin-top:-150px;
+	margin-bottom:60px;
+	-webkit-box-shadow:0 -10px 30px -10px rgba(5,97,125,0.5);
+	box-shadow:0 -10px 30px -10px rgba(5,97,125,0.5);
+
+	> .row{
+		margin:0;
+
+		> div{
+			padding:0;
+		}
+	}
+}
+
+a.grid-cell{
+	display:block;
+	position:relative;
+	text-decoration:none;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:center center;
+	-webkit-background-size:cover;
+  	 -moz-background-size:cover;
+  		 -o-background-size:cover;
+  				background-size:cover;
+
+	figcaption{
+		background:transparent;
+		color:#fff;
+		font-size:32px;
+		font-weight:700;
+		line-height:36px;
+		position:absolute;
+		width:100%;
+		height:100%;
+		padding:40px;
+		opacity:0;
+		-moz-transform: 	scale(1.2);
+		-ms-transform: 		scale(1.2);
+		-webkit-transform:scale(1.2);
+		transform: 				scale(1.2);
+		-moz-transition:	 all 0.2s ease-in-out;
+		-o-transition: 		 all 0.2s ease-in-out;
+		-webkit-transition:all 0.2s ease-in-out;
+		transition: 			 all 0.2s ease-in-out;
+
+		span{
+			position:absolute;
+			text-align:center;
+			top:50%;
+			-moz-transform: 	translateY(-50%);
+			-ms-transform: 		translateY(-50%);
+			-webkit-transform:translateY(-50%);
+			transform: 				translateY(-50%);
+			left:40px;
+			right:40px;
+
+			@include media-xs(){
+				left:20px;
+				right:20px;
+				opacity:1;
+			}
+		}
+
+		@include media-xs(){
+				font-size:22px;
+				line-height:26px;
+			}
+	}
+
+	&:hover figcaption{
+		background:$primary-color;
+		opacity:1;
+		-moz-transform:		scale(1);
+		-ms-transform:		scale(1);
+		-webkit-transform:scale(1);
+		transform:				scale(1);
+	}
+
+	&.test1:hover figcaption{ background:#3AC9C3; }
+	&.test2:hover figcaption{ background:#162539; }
+	&.test3:hover figcaption{ background:#26B4DF; }
+	&.test4:hover figcaption{ background:#FF5A06; }
+	&.test5:hover figcaption{ background:#E24025; }
+	&.test6:hover figcaption{ background:#00CEF5; }
+	&.test7:hover figcaption{ background:#D5461F; }
+	&.test8:hover figcaption{ background:#00ABF0; }
+	&.test9:hover figcaption{ background:#FC5068; }
+	&.test10:hover figcaption{ background:#7FA201; }
+	&.test11:hover figcaption{ background:#A1140D; }
+	&.test12:hover figcaption{ background:#AE0001; }
+
+	&:after{
+		content:" ";
+		display:block;
+		padding-bottom:100%;
+	}
+}
+
+hr{
+	border-color:#ddd;
+}
+
+.services{
+	background:#f2f2f2;
+	padding:60px 0;
+
+	h2{
+		font-size:36px;
+		font-weight:bold;
+		margin-top:0;
+		margin-bottom:20px;
+	}
+}
+
+footer{
+	background:#222;
+	color:#fff;
+	padding:30px;
+}
