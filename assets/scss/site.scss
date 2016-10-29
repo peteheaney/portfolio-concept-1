@@ -4,8 +4,9 @@
 @import "variables";
 
 body{
-	font-family:'Ubuntu', sans-serif;
+	font-family:'Roboto Slab', sans-serif;
 	font-size:16px;
+	font-weight:300;
 	line-height:1.6;
 }
 
@@ -34,9 +35,8 @@ nav{
 	a.logo{
 		color:#fff;
 		font-size:28px;
-		font-weight:bold;
+		font-weight:400;
 		line-height:60px;
-		text-transform:uppercase;
 		text-decoration:none;
 	}
 
@@ -74,6 +74,7 @@ nav{
 		padding-left:0;
 		list-style:none;
 		font-size:60px;
+		font-weight:400;
 		text-align:center;
 		top:50%;
 		transform:translateY(-50%);
@@ -135,7 +136,7 @@ a.grid-cell{
 		background:transparent;
 		color:#fff;
 		font-size:32px;
-		font-weight:700;
+		font-weight:300;
 		line-height:36px;
 		position:absolute;
 		width:100%;
