@@ -103,6 +103,16 @@ nav{
 header{
 	background:$primary-color;
 	height:540px;
+
+	p{
+		text-align:center;
+		color:#fff;
+		font-size:50px;
+		font-weight:400;
+		position:relative;
+		top:calc(50% - 75px);
+		transform:translateY(-50%);
+	}
 }
 
 .grid{
