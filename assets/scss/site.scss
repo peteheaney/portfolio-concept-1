@@ -10,6 +10,18 @@ body{
 	line-height:1.6;
 }
 
+a{
+	color:$primary-color;
+	border-bottom:1px dashed transparent;
+}
+
+a:active,
+a:hover{
+	color:darken($primary-color, 20%);
+	text-decoration:none;
+	border-color:darken($primary-color, 20%);
+}
+
 .container-fluid{
 	max-width:1280px;
 
@@ -23,7 +35,7 @@ nav{
 	z-index:2;
 
 	.bar{
-		background:rgba(0,157,204,0.8);
+		background:rgba(248,85,87,0.8);
 		position:fixed;
 		width:100%;
 		top:0;
@@ -42,7 +54,7 @@ nav{
 
 	&.open{
 		height:100%;
-		background:rgba(0,157,204,0.8);
+		background:rgba(248,85,87,0.8);
 
 		.bar{
 			background:transparent;
@@ -56,7 +68,7 @@ nav{
 	}
 
 	.menu{
-		background:rgba(0,157,204,0.8);
+		background:rgba(248,85,87,0.8);
 		z-index:1;
 		position:fixed;
 		left:0;
@@ -91,6 +103,13 @@ nav{
 		a:active,
 		a:hover{
 			color:#fff;
+			text-decoration:none;
+			border-bottom:6px dashed transparent;
+		}
+
+		a:active,
+		a:hover{
+			border-color:#fff;
 		}
 	}
 
@@ -119,8 +138,8 @@ header{
 .grid{
 	margin-top:-150px;
 	margin-bottom:60px;
-	-webkit-box-shadow:0 -10px 30px -10px rgba(5,97,125,0.5);
-	box-shadow:0 -10px 30px -10px rgba(5,97,125,0.5);
+	-webkit-box-shadow:0 -10px 30px -10px rgba(200,30,30,0.5);
+	box-shadow:0 -10px 30px -10px rgba(200,30,30,0.5);
 
 	> .row{
 		margin:0;
@@ -128,6 +147,10 @@ header{
 		> div{
 			padding:0;
 		}
+	}
+
+	a{
+		border:0;
 	}
 }
 
